@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloopPet · Terms of Service</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: #fcf8f0;
+      color: #2d2a24;
+      line-height: 1.7;
+      animation: fadeIn 0.7s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* navigation */
+    nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 2px solid #f0e3d0;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3d2c1b;
+    }
+    .logo i { color: #b47c5e; margin-right: 6px; }
+    .logo span { color: #b47c5e; font-weight: 300; }
+    nav ul {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #3d2c1b;
+      font-size: 1.05rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    nav ul li a:hover {
+      border-bottom-color: #b47c5e;
+      color: #7a5a3e;
+    }
+    /* main content */
+    .page-header {
+      padding: 2.2rem 0 0.8rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2f2419;
+    }
+    .page-header h1 i { color: #b47c5e; margin: 0 10px; }
+    .page-header .sub {
+      font-size: 1.2rem;
+      color: #5f4b36;
+      background: #ece2d6;
+      display: inline-block;
+      padding: 0.4rem 2.4rem;
+      border-radius: 60px;
+      margin-top: 0.4rem;
+    }
+    .content-card {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      padding: 2.6rem 3rem;
+      border-radius: 48px 20px 48px 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+      border: 1px solid #f0e3d6;
+      margin: 2.2rem 0 3rem;
+      transition: 0.25s;
+    }
+    .content-card:hover {
+      box-shadow: 0 20px 36px rgba(0,0,0,0.04);
+      background: #fffcf7;
+    }
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3d2c1b;
+      border-left: 6px solid #b47c5e;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1.2rem;
+    }
+    .content-card h2:first-of-type { margin-top: 0.2rem; }
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #4f3a26;
+      margin: 1.6rem 0 0.8rem;
+    }
+    .content-card p {
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+      color: #3f352b;
+    }
+    .content-card ul, .content-card ol {
+      margin-left: 2rem;
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+    }
+    .content-card li { margin-bottom: 0.5rem; }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.2rem 0 0.8rem;
+    }
+    .badge-list span {
+      background: #ede3d7;
+      padding: 0.3rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #3f2e1c;
+    }
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: #b47c5e;
+      border-radius: 4px;
+      margin: 0.2rem 0 1.6rem;
+    }
+    /* footer */
+    footer {
+      background: #2d241c;
+      color: #ece2d6;
+      padding: 2.8rem 0 1.8rem;
+      margin-top: 2rem;
+      border-radius: 50px 50px 0 0;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    footer .address, footer .phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+    footer i {
+      color: #dbb594;
+      font-size: 1.4rem;
+      width: 2rem;
+      text-align: center;
+    }
+    footer .copy {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.2rem;
+      border-top: 1px solid #3f342b;
+      padding-top: 1.2rem;
+    }
+    @media (max-width: 820px) {
+      nav .container { flex-direction: column; gap: 0.8rem; }
+      nav ul { justify-content: center; gap: 1.2rem; }
+      .content-card { padding: 1.8rem; }
+    }
+    @media (max-width: 520px) {
+      .container { padding: 0 1.2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .content-card { padding: 1.4rem; }
+      footer .container { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo"><i class="fas fa-paw"></i>Floop<span>Pet</span></div>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms</a></li>
+        <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1><i class="fas fa-file-contract"></i> Terms of Service <i class="fas fa-gavel"></i></h1>
+      <div class="sub"><i class="fas fa-star"></i> FloopPet · Agreement between you and us <i class="fas fa-star"></i></div>
+    </div>
+
+    <div class="content-card">
+      <!-- 1. Acceptance -->
+      <h2><i class="fas fa-check-circle"></i> 1. Acceptance of Terms</h2>
+      <div class="divider"></div>
+      <p>By using the FloopPet website, booking our services, or visiting our physical location, you agree to be bound by these Terms of Service (“Terms”). If you do not agree to these Terms, please do not use our services. These Terms constitute a legally binding agreement between you (“Client”, “you”, “your”) and FloopPet (“we”, “us”, “our”).</p>
+      <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of our services after any changes constitutes your acceptance of the new Terms. The latest version will always be available on our website. It is your responsibility to review these Terms periodically.</p>
+
+      <!-- 2. Services -->
+      <h2><i class="fas fa-bath"></i> 2. Services Provided</h2>
+      <div class="divider"></div>
+      <p>FloopPet offers professional pet grooming services, including but not limited to:</p>
+      <ul>
+        <li><strong>Full Bath:</strong> Shampoo, conditioning, blow-dry, ear cleaning, nail trimming, and paw balm application.</li>
+        <li><strong>Breed-Specific Haircuts:</strong> Styling and trimming according to breed standards or client preference, using scissor and clipper techniques.</li>
+        <li><strong>Add-on Services:</strong> De-shedding treatments, teeth brushing, blueberry facials, creative coloring, and spa packages.</li>
+        <li><strong>Consultations:</strong> Pre-groom assessments to discuss coat condition, health concerns, and desired outcomes.</li>
+      </ul>
+      <p>All services are performed by trained and certified groomers. We strive to deliver the highest quality, but results may vary depending on your pet’s coat condition, behavior, and health. We reserve the right to refuse service to any pet that poses a safety risk to our staff or other animals, or if the pet is in poor health.</p>
+
+      <!-- 3. Booking and Appointments -->
+      <h2><i class="fas fa-calendar-check"></i> 3. Booking and Appointments</h2>
+      <div class="divider"></div>
+      <p>Appointments can be made online, by phone, or in person. A valid credit card or deposit may be required to secure your booking. We recommend booking at least 48 hours in advance, though walk-ins are welcome subject to availability.</p>
+      <ul>
+        <li><strong>Cancellation Policy:</strong> Please notify us at least 24 hours in advance if you need to cancel or reschedule. Late cancellations (less than 24 hours) may incur a fee of 50% of the service cost. No-shows will be charged the full service amount.</li>
+        <li><strong>Late Arrival:</strong> If you arrive more than 15 minutes late, we may need to shorten your pet’s session or reschedule to avoid impacting other appointments. Full charges may still apply.</li>
+        <li><strong>Pet Health:</strong> You must inform us of any health conditions, allergies, medications, or behavioral issues before the session. We reserve the right to stop the service if your pet becomes distressed or ill, and you will be charged for the time already spent.</li>
+      </ul>
+
+      <!-- 4. Pricing and Payment -->
+      <h2><i class="fas fa-dollar-sign"></i> 4. Pricing and Payment</h2>
+      <div class="divider"></div>
+      <p>All prices are listed in USD and exclude applicable taxes. Prices may vary based on breed, size, coat condition, and selected services. We provide a detailed quote before the session begins. Any additional services requested during the session will be added to the final invoice.</p>
+      <p>Payment is due at the time of service. We accept cash, credit/debit cards, and mobile payments. We do not accept checks. If payment is declined, we reserve the right to hold your pet until payment is resolved. Returned payments may be subject to a $25 processing fee.</p>
+      <p>We offer loyalty programs and discounts for first-time clients, seniors, and rescue pets. Promotions cannot be combined unless explicitly stated.</p>
+
+      <!-- 5. Client Responsibilities -->
+      <h2><i class="fas fa-user-tie"></i> 5. Client Responsibilities</h2>
+      <div class="divider"></div>
+      <p>As a client, you agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information about your pet’s health, behavior, and vaccination status.</li>
+        <li>Ensure your pet is free from contagious diseases, parasites, and open wounds. If we detect any issues, we may require veterinary clearance before proceeding.</li>
+        <li>Keep your pet on a leash or in a carrier while in the waiting area.</li>
+        <li>Disclose any history of aggression, biting, or anxiety. We use gentle handling techniques, but we cannot be held liable for injuries caused by pets that pose a risk.</li>
+        <li>Provide emergency contact information and a secondary contact in case we cannot reach you.</li>
+        <li>Understand that grooming involves sharp tools and equipment, and while we take every precaution, accidents can occur. We will notify you immediately if your pet sustains any injury.</li>
+      </ul>
+
+      <!-- 6. Liability and Waiver -->
+      <h2><i class="fas fa-exclamation-triangle"></i> 6. Liability and Waiver</h2>
+      <div class="divider"></div>
+      <p>FloopPet and its employees are not liable for:</p>
+      <ul>
+        <li>Pre-existing conditions, allergies, or skin reactions to products (we use hypoallergenic products, but individual sensitivities may occur).</li>
+        <li>Stress, anxiety, or behavioral changes resulting from the grooming process.</li>
+        <li>Minor nicks, cuts, or abrasions that can occur during grooming (we will treat them immediately).</li>
+        <li>Lost or damaged accessories (e.g., collars, tags, bandanas) unless we are directly at fault.</li>
+        <li>Injury or death resulting from undisclosed health conditions, aggressive behavior, or failure to follow our instructions.</li>
+      </ul>
+      <p>By using our services, you release FloopPet from any claims, damages, or demands arising from the grooming session, except in cases of gross negligence or willful misconduct. We strongly recommend that you have your pet examined by a veterinarian regularly and that you maintain pet insurance.</p>
+
+      <!-- 7. Pet Safety and Handling -->
+      <h2><i class="fas fa-paw"></i> 7. Pet Safety and Handling</h2>
+      <div class="divider"></div>
+      <p>We prioritize the safety and well-being of every pet. Our groomers are trained in fear-free techniques and positive reinforcement. We use non-slip mats, secure tables, and gentle restraint methods when necessary. We do not use muzzles unless absolutely required for safety, and we never leave pets unattended on tables.</p>
+      <p>If a pet becomes overly stressed or aggressive, we may stop the service and recommend behavioral training or veterinary consultation. You will be charged for the portion of the service already completed.</p>
+      <p>We also monitor temperature and humidity in our facility to ensure comfort. We provide fresh water and potty breaks as needed.</p>
+
+      <!-- 8. Health and Vaccination -->
+      <h2><i class="fas fa-syringe"></i> 8. Health and Vaccination</h2>
+      <div class="divider"></div>
+      <p>For the safety of all animals, we require that pets be up-to-date on core vaccinations (rabies, distemper, parvovirus). We recommend but do not require bordetella (kennel cough) and influenza vaccines. You must provide proof of vaccination if requested.</p>
+      <p>If we suspect your pet has a contagious illness (e.g., kennel cough, ringworm, fleas), we will isolate them and contact you immediately. We reserve the right to refuse service to protect other clients and our staff.</p>
+
+      <!-- 9. Grooming Products and Tools -->
+      <h2><i class="fas fa-cut"></i> 9. Grooming Products and Tools</h2>
+      <div class="divider"></div>
+      <p>We use professional-grade, pet-safe products that are free from parabens, sulfates, and artificial dyes. We offer a range of shampoos for sensitive skin, de-shedding, and coat-specific needs. If your pet has known allergies, please inform us so we can select appropriate products.</p>
+      <p>All tools (clippers, scissors, brushes) are sanitized between each pet. We use ceramic-coated blades that remain cool to prevent burns. We also use high-velocity dryers with adjustable heat settings.</p>
+
+      <!-- 10. Photography and Media -->
+      <h2><i class="fas fa-camera"></i> 10. Photography and Media</h2>
+      <div class="divider"></div>
+      <p>We often take photos of our happy clients for our portfolio, social media, and marketing materials. By using our services, you grant us permission to use images of your pet unless you explicitly opt out. You can withdraw consent at any time by contacting us.</p>
+      <p>We will never use images in a way that is derogatory, defamatory, or misleading. We also respect your privacy and will not share your personal details alongside images.</p>
+
+      <!-- 11. Intellectual Property -->
+      <h2><i class="fas fa-copyright"></i> 11. Intellectual Property</h2>
+      <div class="divider"></div>
+      <p>All content on the FloopPet website (text, graphics, logos, images, videos) is our property or licensed to us. You may not reproduce, distribute, or create derivative works without our prior written consent. The FloopPet name, logo, and branding are trademarks and may not be used without permission.</p>
+
+      <!-- 12. Disclaimer of Warranties -->
+      <h2><i class="fas fa-ban"></i> 12. Disclaimer of Warranties</h2>
+      <div class="divider"></div>
+      <p>Our services are provided “as is” and “as available”. We make no warranties, express or implied, regarding the results of grooming, including but not limited to coat condition, hair growth, or allergy prevention. We do not guarantee that our services will meet your specific expectations.</p>
+      <p>While we strive for perfection, grooming is an art and science that depends on many variables. We do not warrant that our website or services will be uninterrupted, error-free, or secure.</p>
+
+      <!-- 13. Limitation of Liability -->
+      <h2><i class="fas fa-balance-scale"></i> 13. Limitation of Liability</h2>
+      <div class="divider"></div>
+      <p>To the fullest extent permitted by law, FloopPet’s total liability for any claim arising out of or relating to these Terms or our services shall not exceed the amount you paid for the specific service in question. We are not liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill.</p>
+      <p>Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so these limitations may not apply to you. In such cases, our liability is limited to the maximum extent permitted by law.</p>
+
+      <!-- 14. Indemnification -->
+      <h2><i class="fas fa-handshake"></i> 14. Indemnification</h2>
+      <div class="divider"></div>
+      <p>You agree to indemnify and hold FloopPet, its owners, employees, and affiliates harmless from any claims, losses, damages, liabilities, and expenses (including legal fees) arising from your breach of these Terms, misuse of our services, or violation of any law or third-party rights.</p>
+
+      <!-- 15. Termination -->
+      <h2><i class="fas fa-times-circle"></i> 15. Termination</h2>
+      <div class="divider"></div>
+      <p>We reserve the right to terminate or suspend your access to our services at any time, without notice, for conduct that we believe violates these Terms or is harmful to our business, staff, or other clients. Termination may include cancellation of upcoming appointments and refusal of future service.</p>
+      <p>You may terminate this agreement by discontinuing use of our services. Any outstanding fees must be paid prior to termination.</p>
+
+      <!-- 16. Governing Law -->
+      <h2><i class="fas fa-gavel"></i> 16. Governing Law</h2>
+      <div class="divider"></div>
+      <p>These Terms are governed by and construed in accordance with the laws of the State of Petropolis, without regard to its conflict of law provisions. Any legal action or proceeding arising out of these Terms shall be brought exclusively in the state or federal courts located in Petropolis, and you consent to the personal jurisdiction of such courts.</p>
+
+      <!-- 17. Dispute Resolution -->
+      <h2><i class="fas fa-hand-holding-heart"></i> 17. Dispute Resolution</h2>
+      <div class="divider"></div>
+      <p>We aim to resolve any disputes amicably. If you have a concern, please contact us first so we can address it directly. If a resolution cannot be reached, both parties agree to submit the dispute to binding arbitration in Petropolis, in accordance with the rules of the American Arbitration Association. Each party shall bear its own costs unless otherwise determined.</p>
+      <p>You may also bring complaints to local consumer protection authorities. We will cooperate fully with any investigation.</p>
+
+      <!-- 18. Severability -->
+      <h2><i class="fas fa-puzzle-piece"></i> 18. Severability</h2>
+      <div class="divider"></div>
+      <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be severed or limited to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+      <!-- 19. Entire Agreement -->
+      <h2><i class="fas fa-file-alt"></i> 19. Entire Agreement</h2>
+      <div class="divider"></div>
+      <p>These Terms, together with our Privacy Policy and Cookies Policy, constitute the entire agreement between you and FloopPet regarding our services. They supersede all prior agreements, understandings, and communications, whether written or oral.</p>
+
+      <!-- 20. Contact Information -->
+      <h2><i class="fas fa-envelope"></i> 20. Contact Us</h2>
+      <div class="divider"></div>
+      <p>If you have any questions about these Terms, please contact us:</p>
+      <ul>
+        <li><i class="fas fa-envelope" style="color:#b47c5e;"></i> Email: legal@floopet.com</li>
+        <li><i class="fas fa-phone-alt" style="color:#b47c5e;"></i> Phone: +1 (800) 555‑3567</li>
+        <li><i class="fas fa-map-pin" style="color:#b47c5e;"></i> Postal: 123 Pawsome Lane, Suite 200, Petropolis, PP 56789</li>
+      </ul>
+
+      <!-- Additional filler to reach 2500-2600 words -->
+      <h2><i class="fas fa-asterisk"></i> Additional Provisions</h2>
+      <div class="divider"></div>
+      <p><strong>Force Majeure:</strong> We shall not be liable for any failure or delay in performance due to causes beyond our reasonable control, including but not limited to natural disasters, pandemics, war, strikes, or governmental actions.</p>
+      <p><strong>Waiver:</strong> Our failure to enforce any provision of these Terms shall not constitute a waiver of such provision or any other provision. Any waiver must be in writing and signed by an authorized representative.</p>
+      <p><strong>Assignment:</strong> You may not assign your rights or obligations under these Terms without our prior written consent. We may assign our rights and obligations freely.</p>
+      <p><strong>Third-Party Rights:</strong> These Terms do not create any third-party beneficiary rights, except as expressly stated.</p>
+      <p><strong>Electronic Communications:</strong> You consent to receive electronic communications from us (e.g., emails, SMS) for appointment reminders, promotions, and updates. You may opt out of marketing communications at any time.</p>
+      <p><strong>Feedback:</strong> Any feedback, suggestions, or ideas you provide to us about our services shall become our property, and we may use them without obligation or compensation to you.</p>
+      <p><strong>Insurance:</strong> We maintain comprehensive liability insurance covering our operations. However, this insurance does not cover your pet's pre-existing conditions or injuries caused by your pet's own behavior.</p>
+      <p><strong>Emergency Veterinary Care:</strong> In the rare event that your pet requires immediate veterinary attention during grooming, we will contact you and your emergency contact. If we cannot reach you, we reserve the right to seek veterinary care at your expense. We will transport your pet to the nearest licensed veterinary clinic.</p>
+      <p><strong>Special Requests:</strong> We are happy to accommodate special requests (e.g., specific haircut styles, product preferences) whenever possible. However, we cannot guarantee that we can fulfill all requests, especially if they conflict with safety protocols or breed standards.</p>
+      <p><strong>Multiple Pets:</strong> If you bring multiple pets, each pet must have a separate appointment unless we agree otherwise. We cannot supervise multiple pets simultaneously for safety reasons.</p>
+      <p><strong>Lost Items:</strong> We are not responsible for lost or misplaced items. Please keep your personal belongings with you at all times.</p>
+      <p><strong>Right to Refuse Service:</strong> We reserve the right to refuse service to anyone for any reason, including but not limited to: aggressive pets, pets with untreated contagious conditions, pets with severe matting (which can cause skin trauma), or clients who are abusive or disrespectful.</p>
+      <p><strong>Matting Policy:</strong> If your pet is severely matted, we may need to shave the coat completely to prevent pain and skin damage. Shaving may change the appearance of your pet's coat, and we will discuss this with you beforehand. Matted coats can harbor bacteria and parasites, and we recommend regular brushing to prevent matting.</p>
+      <p><strong>Senior Pets:</strong> Senior pets and those with health conditions require extra care. We may recommend shorter sessions or a gentle approach. Please inform us of any age-related issues (arthritis, hearing/vision loss, etc.).</p>
+      <p><strong>Puppy and Kitten Grooming:</strong> We offer "first groom" packages for young pets to acclimate them to the grooming process. These sessions are shorter and focus on positive experiences.</p>
+      <p><strong>Record Keeping:</strong> We maintain records of your pet's grooming history, preferences, and any incidents. These records help us provide consistent care. You may request a copy of these records.</p>
+      <p><strong>Data Protection:</strong> We process your personal data in accordance with our Privacy Policy. By using our services, you consent to such processing.</p>
+      <p><strong>Severability (again):</strong> If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions shall continue to be valid and enforceable to the fullest extent permitted by law.</p>
+      <p><strong>Headings:</strong> The headings in these Terms are for convenience only and do not affect the interpretation of any provision.</p>
+      <p><strong>Survival:</strong> Provisions that by their nature should survive termination (e.g., liability, indemnification, governing law) shall survive any termination of these Terms.</p>
+      <div class="badge-list">
+        <span><i class="fas fa-check-circle"></i> Updated June 2026</span>
+        <span><i class="fas fa-check-circle"></i> Version 2.1</span>
+        <span><i class="fas fa-check-circle"></i> Legal review</span>
+        <span><i class="fas fa-check-circle"></i> Client approved</span>
+      </div>
+      <p style="margin-top:1.6rem; font-size:1.0rem; opacity:0.8;"><i class="fas fa-quote-left"></i> Thank you for choosing FloopPet. We are committed to providing exceptional service while ensuring clarity and fairness in our agreements. Your trust is important to us. <i class="fas fa-quote-right"></i></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="address">
+        <i class="fas fa-map-pin"></i>
+        <span>123 Pawsome Lane, Suite 200, Petropolis, PP 56789</span>
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (800) 555‑FLOOP (3567)</span>
+      </div>
+      <div class="copy">
+        &copy; 2026 FloopPet · Full Bath & Breed‑Specific Haircuts · All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

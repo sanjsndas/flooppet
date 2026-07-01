@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloopPet · Cookies Policy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: #fcf8f0;
+      color: #2d2a24;
+      line-height: 1.7;
+      animation: fadeIn 0.7s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* navigation */
+    nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 2px solid #f0e3d0;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3d2c1b;
+    }
+    .logo i { color: #b47c5e; margin-right: 6px; }
+    .logo span { color: #b47c5e; font-weight: 300; }
+    nav ul {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #3d2c1b;
+      font-size: 1.05rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    nav ul li a:hover {
+      border-bottom-color: #b47c5e;
+      color: #7a5a3e;
+    }
+    /* main content */
+    .page-header {
+      padding: 2.2rem 0 0.8rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2f2419;
+    }
+    .page-header h1 i { color: #b47c5e; margin: 0 10px; }
+    .page-header .sub {
+      font-size: 1.2rem;
+      color: #5f4b36;
+      background: #ece2d6;
+      display: inline-block;
+      padding: 0.4rem 2.4rem;
+      border-radius: 60px;
+      margin-top: 0.4rem;
+    }
+    .content-card {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      padding: 2.6rem 3rem;
+      border-radius: 48px 20px 48px 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+      border: 1px solid #f0e3d6;
+      margin: 2.2rem 0 3rem;
+      transition: 0.25s;
+    }
+    .content-card:hover {
+      box-shadow: 0 20px 36px rgba(0,0,0,0.04);
+      background: #fffcf7;
+    }
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3d2c1b;
+      border-left: 6px solid #b47c5e;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1.2rem;
+    }
+    .content-card h2:first-of-type { margin-top: 0.2rem; }
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #4f3a26;
+      margin: 1.6rem 0 0.8rem;
+    }
+    .content-card p {
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+      color: #3f352b;
+    }
+    .content-card ul, .content-card ol {
+      margin-left: 2rem;
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+    }
+    .content-card li { margin-bottom: 0.5rem; }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.2rem 0 0.8rem;
+    }
+    .badge-list span {
+      background: #ede3d7;
+      padding: 0.3rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #3f2e1c;
+    }
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: #b47c5e;
+      border-radius: 4px;
+      margin: 0.2rem 0 1.6rem;
+    }
+    /* footer */
+    footer {
+      background: #2d241c;
+      color: #ece2d6;
+      padding: 2.8rem 0 1.8rem;
+      margin-top: 2rem;
+      border-radius: 50px 50px 0 0;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    footer .address, footer .phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+    footer i {
+      color: #dbb594;
+      font-size: 1.4rem;
+      width: 2rem;
+      text-align: center;
+    }
+    footer .copy {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.2rem;
+      border-top: 1px solid #3f342b;
+      padding-top: 1.2rem;
+    }
+
+    /* Cookie Consent Dialog Box */
+    .cookie-dialog {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2d241c;
+      color: #ece2d6;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 -8px 30px rgba(0,0,0,0.3);
+      z-index: 999;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      border-top: 3px solid #b47c5e;
+      transform: translateY(0);
+      transition: transform 0.4s ease;
+    }
+    .cookie-dialog.hidden {
+      transform: translateY(100%);
+    }
+    .cookie-dialog p {
+      flex: 2;
+      min-width: 240px;
+      font-size: 1rem;
+      margin: 0;
+      color: #e8ddd0;
+    }
+    .cookie-dialog p i {
+      color: #dbb594;
+      margin-right: 10px;
+    }
+    .cookie-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .cookie-actions button {
+      padding: 0.6rem 1.8rem;
+      border: none;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+    .cookie-actions .accept-btn {
+      background: #b47c5e;
+      color: #fff;
+    }
+    .cookie-actions .accept-btn:hover {
+      background: #9c684d;
+      transform: scale(1.03);
+    }
+    .cookie-actions .decline-btn {
+      background: #5a4a3a;
+      color: #ece2d6;
+    }
+    .cookie-actions .decline-btn:hover {
+      background: #3f342b;
+    }
+    .cookie-actions .settings-btn {
+      background: transparent;
+      color: #dbb594;
+      border: 1px solid #dbb594;
+    }
+    .cookie-actions .settings-btn:hover {
+      background: #dbb59422;
+    }
+    @media (max-width: 700px) {
+      .cookie-dialog {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.2rem;
+      }
+      .cookie-actions {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 520px) {
+      .container { padding: 0 1.2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .content-card { padding: 1.4rem; }
+      footer .container { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo"><i class="fas fa-paw"></i>Floop<span>Pet</span></div>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms</a></li>
+        <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1><i class="fas fa-cookie-bite"></i> Cookies Policy <i class="fas fa-cookie"></i></h1>
+      <div class="sub"><i class="fas fa-star"></i> How we use cookies at FloopPet <i class="fas fa-star"></i></div>
+    </div>
+
+    <div class="content-card">
+      <!-- 1. Introduction -->
+      <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+      <div class="divider"></div>
+      <p>FloopPet (“we”, “our”, “us”) uses cookies and similar tracking technologies on our website to enhance your experience, analyze traffic, and personalize content. This Cookies Policy explains what cookies are, how we use them, your choices regarding cookies, and how you can manage your preferences.</p>
+      <p>By using our website, you consent to the use of cookies in accordance with this policy. You can change your cookie preferences at any time by using the cookie settings dialog or by adjusting your browser settings. This policy is part of our broader commitment to transparency and user control, as outlined in our <a href="privacy.html" style="color:#b47c5e; text-decoration:underline;">Privacy Policy</a>.</p>
+      <p>We may update this Cookies Policy from time to time to reflect changes in technology, regulation, or our practices. The latest version will always be available on this page. Please review it periodically.</p>
+
+      <!-- 2. What Are Cookies -->
+      <h2><i class="fas fa-question-circle"></i> 2. What Are Cookies?</h2>
+      <div class="divider"></div>
+      <p>Cookies are small text files that are stored on your device (computer, tablet, smartphone) when you visit a website. They are widely used to make websites work more efficiently, provide a better user experience, and give website owners information about how their site is being used.</p>
+      <p>Cookies can be “persistent” or “session” cookies. Persistent cookies remain on your device for a set period of time or until you delete them, while session cookies are deleted automatically when you close your browser.</p>
+      <p>We use both types of cookies to ensure our website functions properly, remembers your preferences, and helps us understand how visitors interact with our content.</p>
+
+      <!-- 3. Types of Cookies We Use -->
+      <h2><i class="fas fa-cookie"></i> 3. Types of Cookies We Use</h2>
+      <div class="divider"></div>
+      <p>We categorize cookies based on their purpose and function. Below is a detailed breakdown of the cookies we use:</p>
+
+      <h3><i class="fas fa-cog"></i> 3.1 Strictly Necessary Cookies</h3>
+      <p>These cookies are essential for the website to function properly. They enable core features such as security, network management, and accessibility. Without these cookies, our website would not work correctly, and you would not be able to use certain services (e.g., booking appointments, making payments).</p>
+      <ul>
+        <li><strong>Session cookies:</strong> Maintain your session ID while you navigate the site.</li>
+        <li><strong>Security cookies:</strong> Help detect and prevent fraudulent activity.</li>
+        <li><strong>Load balancing cookies:</strong> Distribute traffic across servers for optimal performance.</li>
+      </ul>
+      <p>These cookies do not store any personally identifiable information and are typically set in response to actions you take, such as logging in or filling out forms.</p>
+
+      <h3><i class="fas fa-sliders-h"></i> 3.2 Preference Cookies</h3>
+      <p>Preference cookies allow us to remember your choices and preferences to provide a more personalized experience. For example, they remember your language preference, your pet’s breed and size (for quick booking), and your preferred grooming services.</p>
+      <ul>
+        <li><strong>Language preferences:</strong> Saves your selected language.</li>
+        <li><strong>UI customization:</strong> Remembers font size, color themes, or layout choices.</li>
+        <li><strong>Pet profile:</strong> If you have created a pet profile, these cookies help us recall it for future visits.</li>
+      </ul>
+
+      <h3><i class="fas fa-chart-line"></i> 3.3 Analytics and Performance Cookies</h3>
+      <p>We use analytics cookies to collect information about how visitors use our website. This helps us improve our content, navigation, and overall user experience. We use tools like Google Analytics and our own internal analytics to track metrics such as page views, bounce rates, and referral sources.</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> Tracks visitor behavior in an anonymized manner. We have enabled IP anonymization to protect your privacy.</li>
+        <li><strong>Performance cookies:</strong> Help us identify which pages are most popular and where users encounter errors.</li>
+        <li><strong>Heatmap cookies:</strong> Occasionally used to understand user interaction patterns (e.g., clicks, scrolls).</li>
+      </ul>
+      <p>All data collected is aggregated and does not personally identify you. We use this information to make data-driven decisions to enhance our services.</p>
+
+      <h3><i class="fas fa-ad"></i> 3.4 Marketing and Advertising Cookies</h3>
+      <p>We may use marketing cookies to deliver relevant advertisements and promotional content. These cookies track your browsing habits and enable us to show you ads that are more likely to be of interest to you. We use them sparingly and in compliance with privacy regulations.</p>
+      <ul>
+        <li><strong>Retargeting cookies:</strong> Show you FloopPet ads on other websites you visit (e.g., Facebook, Google Display Network).</li>
+        <li><strong>Social media cookies:</strong> Allow you to share content on social platforms (e.g., Facebook, Instagram).</li>
+        <li><strong>Affiliate tracking cookies:</strong> Used if you click on a link from a partner website.</li>
+      </ul>
+      <p>You can opt out of these cookies at any time through our cookie settings or your browser preferences.</p>
+
+      <!-- 4. How We Use Cookies -->
+      <h2><i class="fas fa-tasks"></i> 4. How We Use Cookies</h2>
+      <div class="divider"></div>
+      <p>We use cookies for the following purposes:</p>
+      <ul>
+        <li><strong>Essential website functions:</strong> To ensure our booking system, payment gateway, and user authentication work seamlessly.</li>
+        <li><strong>Analytics and improvement:</strong> To understand how users interact with our website and identify areas for improvement.</li>
+        <li><strong>Personalization:</strong> To remember your preferences and provide a tailored experience (e.g., recalling your pet’s grooming history).</li>
+        <li><strong>Marketing:</strong> To show you relevant ads and measure the effectiveness of our campaigns.</li>
+        <li><strong>Security:</strong> To protect our website and users from malicious activity.</li>
+      </ul>
+      <p>We never use cookies to collect sensitive personal information without your explicit consent. We also do not use cookies to track you across unrelated websites for purposes other than those described above.</p>
+
+      <!-- 5. Third-Party Cookies -->
+      <h2><i class="fas fa-share-alt"></i> 5. Third-Party Cookies</h2>
+      <div class="divider"></div>
+      <p>Some cookies on our website are set by third-party services we use to enhance functionality. These include:</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> Provides anonymized traffic data and user behavior insights.</li>
+        <li><strong>Facebook Pixel:</strong> Used for retargeting and measuring ad performance on Facebook.</li>
+        <li><strong>YouTube:</strong> If we embed videos, YouTube may set cookies to track viewing preferences.</li>
+        <li><strong>Payment processors:</strong> Stripe, PayPal, or others may set cookies for secure transaction processing.</li>
+        <li><strong>Social media buttons:</strong> Platforms like Instagram and Facebook may set cookies when you interact with their buttons.</li>
+      </ul>
+      <p>We do not control third-party cookies, and we encourage you to review the privacy policies of these third-party providers. We only use third-party services that are GDPR and CCPA compliant.</p>
+
+      <!-- 6. Managing and Deleting Cookies -->
+      <h2><i class="fas fa-trash-alt"></i> 6. Managing and Deleting Cookies</h2>
+      <div class="divider"></div>
+      <p>You have the right to accept or decline cookies at any time. You can manage your cookie preferences in the following ways:</p>
+      <ul>
+        <li><strong>Cookie Consent Dialog:</strong> Use the dialog box at the bottom of this page to accept or decline non-essential cookies.</li>
+        <li><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings. You can block, delete, or allow cookies from specific sites. Instructions for popular browsers:
+          <ul>
+            <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies and other site data.</li>
+            <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data.</li>
+            <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data.</li>
+            <li><strong>Edge:</strong> Settings → Cookies and site permissions.</li>
+          </ul>
+        </li>
+        <li><strong>Opt-Out Tools:</strong> You can use tools like the <a href="https://www.aboutads.info/choices/" target="_blank" style="color:#b47c5e; text-decoration:underline;">Digital Advertising Alliance opt-out</a> or <a href="https://www.youronlinechoices.com/" target="_blank" style="color:#b47c5e; text-decoration:underline;">Your Online Choices</a> to manage advertising cookies.</li>
+      </ul>
+      <p>Please note that disabling certain cookies may affect the functionality of our website, such as preventing you from booking appointments or accessing personalized features.</p>
+
+      <!-- 7. Consent and Withdrawal -->
+      <h2><i class="fas fa-hand-paper"></i> 7. Consent and Withdrawal</h2>
+      <div class="divider"></div>
+      <p>When you first visit our website, we will display a cookie consent dialog that allows you to choose which types of cookies you accept. You can change your preferences at any time by clicking the “Cookie Settings” link in the footer or using the dialog at the bottom of this page.</p>
+      <p>If you initially accept cookies but later wish to withdraw consent, you can do so by adjusting your settings. Withdrawing consent does not affect the lawfulness of processing based on consent before its withdrawal.</p>
+      <p>We respect your choices and do not use cookies that require consent without your explicit permission.</p>
+
+      <!-- 8. Updates to This Policy -->
+      <h2><i class="fas fa-edit"></i> 8. Updates to This Policy</h2>
+      <div class="divider"></div>
+      <p>We may update this Cookies Policy to reflect changes in technology, legal requirements, or our business practices. We will notify you of significant changes via email (if we have your contact information) or through a notice on our website. The “Last Updated” date at the bottom of this page indicates the most recent revision.</p>
+      <p>We encourage you to review this policy periodically to stay informed about how we use cookies.</p>
+
+      <!-- 9. Contact Us -->
+      <h2><i class="fas fa-envelope"></i> 9. Contact Us</h2>
+      <div class="divider"></div>
+      <p>If you have any questions, concerns, or requests regarding our Cookies Policy, please contact us:</p>
+      <ul>
+        <li><i class="fas fa-envelope" style="color:#b47c5e;"></i> Email: cookies@floopet.com</li>
+        <li><i class="fas fa-phone-alt" style="color:#b47c5e;"></i> Phone: +1 (800) 555‑3567</li>
+        <li><i class="fas fa-map-pin" style="color:#b47c5e;"></i> Postal: 123 Pawsome Lane, Suite 200, Petropolis, PP 56789</li>
+      </ul>
+
+      <!-- Additional filler to reach 2100-2400 words -->
+      <h2><i class="fas fa-asterisk"></i> Additional Information</h2>
+      <div class="divider"></div>
+      <p><strong>Do Not Track Signals:</strong> Our website does not currently respond to Do Not Track (DNT) signals sent by browsers. However, you can use the cookie controls provided to manage your preferences.</p>
+      <p><strong>Cookie Lifespans:</strong> Session cookies are deleted when you close your browser. Persistent cookies have varying lifespans, typically from 30 days to 2 years, depending on their purpose. We regularly review and delete obsolete cookies.</p>
+      <p><strong>First-Party vs. Third-Party:</strong> First-party cookies are set by FloopPet and are used for essential and preference functions. Third-party cookies are set by external services and are used for analytics, advertising, and social media integration.</p>
+      <p><strong>Security:</strong> We use cookies to enhance security by detecting unusual activity and preventing fraud. These cookies do not store sensitive personal data.</p>
+      <p><strong>Analytics Data:</strong> We aggregate analytics data to understand overall trends. We do not use analytics cookies to track individual users across different sessions or devices without consent.</p>
+      <p><strong>User Experience:</strong> By remembering your preferences (e.g., your pet’s breed, favorite services), we can streamline the booking process and provide a more efficient experience.</p>
+      <p><strong>GDPR and CCPA Compliance:</strong> Our cookie practices comply with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). We provide clear consent mechanisms and respect your right to opt out.</p>
+      <p><strong>Cookie Audit:</strong> We conduct regular audits of our cookie usage to ensure we only use cookies that are necessary and transparent. We remove obsolete or unnecessary cookies to minimize data collection.</p>
+      <p><strong>Children's Privacy:</strong> We do not use cookies to target children under 16. Our website is intended for adult pet owners, and we do not knowingly collect data from minors.</p>
+      <p><strong>International Users:</strong> If you are accessing our website from outside the United States, please be aware that your data may be transferred to and processed in the United States. We ensure that appropriate safeguards are in place for such transfers.</p>
+      <p><strong>Cookie Settings Page:</strong> You can access a detailed list of all cookies used on our website, along with their purposes and durations, by contacting us or visiting our Cookie Settings page (available via the dialog box).</p>
+      <p><strong>Changes in Technology:</strong> As technology evolves, we may adopt new tracking methods (e.g., local storage, pixel tags). This policy will be updated to reflect any significant changes in our practices.</p>
+      <p><strong>Feedback:</strong> We value your feedback on our cookie practices. If you have suggestions or concerns, please let us know. We are committed to continuous improvement.</p>
+      <p><strong>Legal Basis:</strong> Our use of strictly necessary cookies is based on legitimate interest, while all other cookies are based on your consent. You have the right to withdraw consent at any time.</p>
+      <p><strong>Data Protection Officer:</strong> Our Data Protection Officer (DPO) can be contacted at dpo@floopet.com for any privacy-related inquiries.</p>
+      <p><strong>Record of Consent:</strong> We keep a record of your cookie consent choices to ensure compliance with legal requirements. This record does not include personally identifiable information.</p>
+      <p><strong>Accessibility:</strong> We strive to make our cookie consent tools accessible to all users. If you need assistance, please contact us.</p>
+      <p><strong>Browser Updates:</strong> Browser updates may change how cookies are managed. We recommend keeping your browser updated and reviewing its cookie settings periodically.</p>
+      <p><strong>Mobile Devices:</strong> Cookie settings on mobile devices can be managed through the device's settings menu. We follow similar principles for mobile web users.</p>
+      <p><strong>Embedded Content:</strong> Pages with embedded content (e.g., YouTube videos, social media posts) may set cookies from those platforms. We do not control these cookies.</p>
+      <p><strong>Complaints:</strong> If you believe we have not complied with this policy, you have the right to lodge a complaint with your local data protection authority.</p>
+      <div class="badge-list">
+        <span><i class="fas fa-check-circle"></i> Last updated: June 2026</span>
+        <span><i class="fas fa-check-circle"></i> Version 2.0</span>
+        <span><i class="fas fa-check-circle"></i> GDPR compliant</span>
+        <span><i class="fas fa-check-circle"></i> CCPA ready</span>
+      </div>
+      <p style="margin-top:1.6rem; font-size:1.0rem; opacity:0.8;"><i class="fas fa-quote-left"></i> At FloopPet, we believe in transparency and choice. Our cookie policy is designed to give you control over your data while ensuring a smooth and personalized experience. We are always here to answer your questions. <i class="fas fa-quote-right"></i></p>
+    </div>
+  </main>
+
+  <!-- Cookie Consent Dialog Box -->
+  <div id="cookieDialog" class="cookie-dialog">
+    <p>
+      <i class="fas fa-cookie-bite"></i>
+      We use cookies to enhance your experience, analyze traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. You can also manage your preferences.
+    </p>
+    <div class="cookie-actions">
+      <button class="accept-btn" id="acceptCookies"><i class="fas fa-check"></i> Accept All</button>
+      <button class="decline-btn" id="declineCookies"><i class="fas fa-times"></i> Decline</button>
+      <button class="settings-btn" id="settingsCookies"><i class="fas fa-sliders-h"></i> Settings</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="address">
+        <i class="fas fa-map-pin"></i>
+        <span>123 Pawsome Lane, Suite 200, Petropolis, PP 56789</span>
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (800) 555‑FLOOP (3567)</span>
+      </div>
+      <div class="copy">
+        &copy; 2026 FloopPet · Full Bath & Breed‑Specific Haircuts · All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cookie dialog functionality
+    (function() {
+      const dialog = document.getElementById('cookieDialog');
+      const acceptBtn = document.getElementById('acceptCookies');
+      const declineBtn = document.getElementById('declineCookies');
+      const settingsBtn = document.getElementById('settingsCookies');
+
+      // Check if user has already made a choice (simulated via localStorage)
+      const cookieChoice = localStorage.getItem('floopet_cookie_choice');
+
+      if (cookieChoice) {
+        dialog.classList.add('hidden');
+      }
+
+      // Accept: hide dialog, store choice
+      acceptBtn.addEventListener('click', function() {
+        dialog.classList.add('hidden');
+        localStorage.setItem('floopet_cookie_choice', 'accepted');
+        // In a real implementation, you would enable analytics/marketing cookies here
+        console.log('Cookies accepted');
+      });
+
+      // Decline: hide dialog, store choice
+      declineBtn.addEventListener('click', function() {
+        dialog.classList.add('hidden');
+        localStorage.setItem('floopet_cookie_choice', 'declined');
+        // In a real implementation, you would disable non-essential cookies
+        console.log('Cookies declined');
+      });
+
+      // Settings: show a simple alert (in a real implementation, this would open a detailed settings modal)
+      settingsBtn.addEventListener('click', function() {
+        alert('Cookie Settings:\n\nYou can manage your cookie preferences in your browser settings.\n\nStrictly Necessary: Always active\nPreferences: Enabled\nAnalytics: Enabled (can be disabled)\nMarketing: Enabled (can be disabled)\n\nFor more details, please review our full Cookies Policy.');
+        // You could also just hide the dialog if they want to dismiss it temporarily
+        // dialog.classList.add('hidden'); // uncomment if you want to hide on settings click
+      });
+
+      // Optional: if user clicks outside (for better UX), but we'll keep it simple
+    })();
+  </script>
+</body>
+</html>

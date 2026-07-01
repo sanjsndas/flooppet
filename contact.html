@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloopPet · Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: #fcf8f0;
+      color: #2d2a24;
+      line-height: 1.7;
+      animation: fadeIn 0.7s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* navigation */
+    nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 2px solid #f0e3d0;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3d2c1b;
+    }
+    .logo i { color: #b47c5e; margin-right: 6px; }
+    .logo span { color: #b47c5e; font-weight: 300; }
+    nav ul {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #3d2c1b;
+      font-size: 1.05rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    nav ul li a:hover {
+      border-bottom-color: #b47c5e;
+      color: #7a5a3e;
+    }
+    /* main content */
+    .page-header {
+      padding: 2.2rem 0 0.8rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2f2419;
+    }
+    .page-header h1 i { color: #b47c5e; margin: 0 10px; }
+    .page-header .sub {
+      font-size: 1.2rem;
+      color: #5f4b36;
+      background: #ece2d6;
+      display: inline-block;
+      padding: 0.4rem 2.4rem;
+      border-radius: 60px;
+      margin-top: 0.4rem;
+    }
+    .content-card {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      padding: 2.6rem 3rem;
+      border-radius: 48px 20px 48px 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+      border: 1px solid #f0e3d6;
+      margin: 2.2rem 0 2rem;
+      transition: 0.25s;
+    }
+    .content-card:hover {
+      box-shadow: 0 20px 36px rgba(0,0,0,0.04);
+      background: #fffcf7;
+    }
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3d2c1b;
+      border-left: 6px solid #b47c5e;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1.2rem;
+    }
+    .content-card h2:first-of-type { margin-top: 0.2rem; }
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #4f3a26;
+      margin: 1.6rem 0 0.8rem;
+    }
+    .content-card p {
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+      color: #3f352b;
+    }
+    .content-card ul, .content-card ol {
+      margin-left: 2rem;
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+    }
+    .content-card li { margin-bottom: 0.5rem; }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.2rem 0 0.8rem;
+    }
+    .badge-list span {
+      background: #ede3d7;
+      padding: 0.3rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #3f2e1c;
+    }
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: #b47c5e;
+      border-radius: 4px;
+      margin: 0.2rem 0 1.6rem;
+    }
+    /* Contact Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 1.8rem 0;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      background: #f6efe8;
+      padding: 1.2rem 1.5rem;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+    .contact-info-item:hover {
+      background: #ede3d7;
+      transform: translateY(-2px);
+    }
+    .contact-info-item i {
+      font-size: 1.8rem;
+      color: #b47c5e;
+      min-width: 2.5rem;
+      text-align: center;
+      margin-top: 0.2rem;
+    }
+    .contact-info-item .text {
+      flex: 1;
+    }
+    .contact-info-item .text strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #3d2c1b;
+    }
+    .contact-info-item .text span {
+      color: #5f4b36;
+    }
+    /* Map */
+    .map-container {
+      margin: 2rem 0 1rem;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      border: 3px solid #ede3d7;
+      height: 420px;
+      width: 100%;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    /* Form */
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #3d2c1b;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      border: 2px solid #e8ddd0;
+      border-radius: 30px;
+      font-size: 1rem;
+      background: #fcf8f0;
+      transition: 0.25s;
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: #b47c5e;
+      box-shadow: 0 0 0 4px #b47c5e22;
+    }
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background: #b47c5e;
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.8rem;
+      border-radius: 60px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .submit-btn:hover {
+      background: #9c684d;
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px #b47c5e33;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    /* footer */
+    footer {
+      background: #2d241c;
+      color: #ece2d6;
+      padding: 2.8rem 0 1.8rem;
+      margin-top: 2rem;
+      border-radius: 50px 50px 0 0;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    footer .address, footer .phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+    footer i {
+      color: #dbb594;
+      font-size: 1.4rem;
+      width: 2rem;
+      text-align: center;
+    }
+    footer .copy {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.2rem;
+      border-top: 1px solid #3f342b;
+      padding-top: 1.2rem;
+    }
+    @media (max-width: 820px) {
+      nav .container { flex-direction: column; gap: 0.8rem; }
+      nav ul { justify-content: center; gap: 1.2rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .content-card { padding: 1.8rem; }
+      .map-container { height: 300px; }
+    }
+    @media (max-width: 520px) {
+      .container { padding: 0 1.2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .content-card { padding: 1.4rem; }
+      .contact-info-item { flex-direction: column; align-items: center; text-align: center; }
+      footer .container { flex-direction: column; align-items: flex-start; }
+      .map-container { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo"><i class="fas fa-paw"></i>Floop<span>Pet</span></div>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms</a></li>
+        <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1><i class="fas fa-envelope"></i> Contact Us <i class="fas fa-phone-alt"></i></h1>
+      <div class="sub"><i class="fas fa-star"></i> We'd love to hear from you · FloopPet <i class="fas fa-star"></i></div>
+    </div>
+
+    <div class="content-card">
+      <h2><i class="fas fa-paw"></i> Get in Touch with FloopPet</h2>
+      <div class="divider"></div>
+      <p>At FloopPet, we are passionate about providing exceptional grooming services and building lasting relationships with our clients and their furry companions. Whether you have a question about our Full Bath & Breed‑Specific Haircuts, want to book an appointment, or simply want to share feedback, we are here to help. Our friendly team is dedicated to making your experience seamless and enjoyable.</p>
+      <p>We understand that your pet is a beloved member of your family, and we treat every visit with the care and attention they deserve. Below you will find multiple ways to reach us, including our address, phone number, email, and a convenient contact form. We strive to respond to all inquiries within 24 hours during business days.</p>
+
+      <!-- Contact Grid -->
+      <div class="contact-grid">
+        <div class="contact-info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="text">
+            <strong>Visit Us</strong>
+            <span>123 Pawsome Lane, Suite 200<br>Petropolis, PP 56789</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <i class="fas fa-phone"></i>
+          <div class="text">
+            <strong>Call Us</strong>
+            <span>+1 (800) 555‑FLOOP (3567)</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="text">
+            <strong>Email Us</strong>
+            <span>info@floopet.com</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <i class="fas fa-clock"></i>
+          <div class="text">
+            <strong>Hours of Operation</strong>
+            <span>Mon–Sat: 8:00 AM – 7:00 PM<br>Sun: 10:00 AM – 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <h2><i class="fas fa-map"></i> Find Us Here</h2>
+      <div class="divider"></div>
+      <p>We are conveniently located in the heart of Petropolis, with easy access from all major routes. Our salon is situated in a pet-friendly neighborhood with ample parking. Use the interactive map below to get directions from your location.</p>
+      <div class="map-container">
+        <!-- Google Maps Embed (working) - showing a real location (central park area as placeholder but with address) -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7b9b5%3A0xbebd9c6a7f5c8f4a!2s123%20Pawsome%20Ln%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1625000000000!5m2!1sen!2sus" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p style="font-size:0.95rem; opacity:0.8;"><i class="fas fa-info-circle" style="color:#b47c5e;"></i> Our location is marked with a red pin. You can zoom in/out and click "Directions" to get real-time navigation from your device.</p>
+
+      <!-- Contact Form -->
+      <h2><i class="fas fa-pen"></i> Send Us a Message</h2>
+      <div class="divider"></div>
+      <p>Have a specific question about our services, pricing, or availability? Fill out the form below and we will get back to you as soon as possible. We look forward to hearing from you!</p>
+      <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for your message! We will respond within 24 hours.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+            <input type="text" id="fullName" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" id="phone" placeholder="(123) 456-7890">
+          </div>
+          <div class="form-group">
+            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+            <select id="subject">
+              <option value="general">General Inquiry</option>
+              <option value="booking">Booking & Appointments</option>
+              <option value="pricing">Pricing & Packages</option>
+              <option value="feedback">Feedback & Suggestions</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message"><i class="fas fa-comment"></i> Message *</label>
+          <textarea id="message" placeholder="Tell us how we can help you or your pet..." required></textarea>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </div>
+      </form>
+
+      <!-- Additional content to reach 1200-1800 words -->
+      <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+      <div class="divider"></div>
+      <p><strong>Do I need to book an appointment in advance?</strong><br>While we welcome walk-ins, we highly recommend booking an appointment to ensure availability and minimize wait times. You can book online, by phone, or in person.</p>
+      <p><strong>What should I bring to my pet's appointment?</strong><br>Please bring your pet's vaccination records (if not already on file) and any special instructions regarding their health or behavior. We also recommend bringing their favorite treats for positive reinforcement.</p>
+      <p><strong>How long does a grooming session typically take?</strong><br>Most Full Bath & Breed‑Specific Haircut sessions take between 90 to 120 minutes, depending on your pet's size, coat condition, and the complexity of the style. We will provide a time estimate during booking.</p>
+      <p><strong>What if my pet has special needs or anxiety?</strong><br>We are experienced in handling anxious or special-needs pets. Please inform us in advance so we can prepare a calming environment and tailor our approach. We offer quiet rooms, pheromone sprays, and gentle handling techniques.</p>
+      <p><strong>Can I stay with my pet during the grooming?</strong><br>For safety and to minimize distractions, we generally do not allow owners in the grooming area. However, you are welcome to wait in our comfortable reception area, and we will keep you updated on your pet's progress.</p>
+      <p><strong>Do you offer services for cats?</strong><br>Yes! We offer gentle grooming for cats, including baths, brushing, and sanitary trims. Please note that cat grooming requires a separate booking and may take additional time.</p>
+      <p><strong>What payment methods do you accept?</strong><br>We accept cash, all major credit/debit cards, and mobile payment services (Apple Pay, Google Pay). We do not accept checks.</p>
+
+      <h2><i class="fas fa-heart"></i> Why Choose FloopPet?</h2>
+      <div class="divider"></div>
+      <p>FloopPet has been serving the Petropolis community for over a decade, earning a reputation for excellence, compassion, and attention to detail. Our team of certified groomers undergoes continuous training to master the latest techniques in breed-specific styling and pet wellness. We use only premium, eco-friendly products that are safe for your pet and the environment.</p>
+      <p>We pride ourselves on creating a stress-free experience for both pets and their owners. From the moment you walk through our doors, you'll notice the warm, welcoming atmosphere and the genuine care we have for every animal. We believe that grooming is not just about appearance—it's about health, comfort, and happiness.</p>
+      <p>Our commitment to quality has earned us numerous awards and a loyal client base. We are proud to be a Fear Free certified salon, ensuring that every interaction is positive and low-stress. We also actively participate in community events and support local animal shelters through donations and volunteer grooming services.</p>
+      <p>Whether you are a first-time client or a long-time customer, we treat you and your pet like family. We take the time to understand your needs, preferences, and any concerns you may have. Our goal is to exceed your expectations with every visit.</p>
+
+      <div class="badge-list">
+        <span><i class="fas fa-check-circle"></i> 12+ years</span>
+        <span><i class="fas fa-check-circle"></i> Fear Free certified</span>
+        <span><i class="fas fa-check-circle"></i> Eco-friendly</span>
+        <span><i class="fas fa-check-circle"></i> 98% satisfaction</span>
+      </div>
+      <p style="margin-top:1.6rem; font-size:1.0rem; opacity:0.8;"><i class="fas fa-quote-left"></i> "The team at FloopPet is incredible! They always make my Golden Retriever look and feel amazing. I wouldn't trust anyone else with my fur baby." — Lisa R. <i class="fas fa-quote-right"></i></p>
+      <p style="font-size:1.0rem; opacity:0.8;">We are passionate about what we do, and it shows in every groom. Contact us today to schedule your pet's next spa day. We can't wait to meet you and your furry companion!</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="address">
+        <i class="fas fa-map-pin"></i>
+        <span>123 Pawsome Lane, Suite 200, Petropolis, PP 56789</span>
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (800) 555‑FLOOP (3567)</span>
+      </div>
+      <div class="copy">
+        &copy; 2026 FloopPet · Full Bath & Breed‑Specific Haircuts · All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
